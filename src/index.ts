@@ -1,10 +1,12 @@
 import express from "express";
 
-const port = 1000;
+const port = 8080;
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("Hello World");
+  const headers = req.headers;
+  console.log(headers);
+  res.send("The headers are: " + JSON.stringify(headers));
 });
 
 app.listen(port, () => {
