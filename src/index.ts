@@ -1,9 +1,8 @@
 import express from "express";
 
-const port = 8080;
+const port = 3000;
 const app = express();
 
-throw new Error('I am going to fail for no reason');
 app.get("/", (req, res) => {
   const headers = req.headers;
   console.log(headers);
